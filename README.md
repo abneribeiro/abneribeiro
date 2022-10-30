@@ -5,9 +5,7 @@
 
 - 🔭 I’m currently working on personal projects
 
-- 🌱 I’m currently learning React
-
-- ▶️ I (not) regularly post videos on [instagram.com/ab_hiner](https://instagram.com/ab_hiner)
+- 🌱 I’m currently learning Nextjs
 
 - 💬 Ask me about **JavaScript, HTML, CSS, Node.JS**
 
@@ -48,9 +46,6 @@
 <p align="left" style="background:yellow">
 <a href="https://twitter.com/AbhineRibeiro" target="_blank">
   <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=twitter" alt="twitter"/>  
-</a>
-<a href="https://instagram.com/ab_hiner" target="_blank">
- <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=instagram" alt="instagram"/>
 </a>
 
 <a href="https://instagram.com/abhineribeiro" target="_blank">
