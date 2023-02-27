@@ -1,13 +1,13 @@
 <h1 align="left">Hi <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, I'm Abner Ribeiro</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abneribeiro&color=yellow" alt="Profile views" /> </p>
 
-- 🔥 Web Developer focused on learning from my personal projects 
+- 🔥 Data Analyst focused on learning from my personal projects 
 
 - 🔭 I’m currently working on personal projects
 
-- 🌱 I’m currently learning Nextjs
+- 🌱 I’m currently learning Data Science
 
-- 💬 Ask me about **JavaScript, HTML, CSS, Node.JS**
+- 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS**
 
 - ⚡ Fun fact **A19B63 😜**
 
@@ -20,7 +20,7 @@
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
 ![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)&nbsp;
-![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
+![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=Python)&nbsp;
 ![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp;
 ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)&nbsp;
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
