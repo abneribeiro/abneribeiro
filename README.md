@@ -53,7 +53,7 @@
 </a>
   
   
- <a href="https://eliasabner38@gmail.com" target="_blank">
+ <a href="mailto:eliasabner38@gmail.com" target="_blank">
 
  <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=Gmail" alt="Gmail"/>
 
