@@ -51,6 +51,13 @@
 <a href="https://instagram.com/abhineribeiro" target="_blank">
  <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=instagram" alt="instagram"/>
 </a>
+  
+  
+ <a href="https://eliasabner38@gmail.com" target="_blank">
+
+ <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=Gmail" alt="Gmail"/>
+
+</a>
 </p>
 
 
