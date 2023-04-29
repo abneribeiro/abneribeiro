@@ -54,7 +54,5 @@
 </p>
 
 
-<img width="490em" src="https://github-readme-twitter-gazf.vercel.app/api?id=AbhineRibeiro&layout=wide&show_reply=off&show_retweet=off" />
 
 
-**Abneribeiro/Abneribeiro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
