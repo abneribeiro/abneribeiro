@@ -9,7 +9,7 @@
 
 - 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS**
 
-- ⚡ Fun fact **A19B63 😜**
+- ⚡ Fun fact **A63 😜**
 
 
 
