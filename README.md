@@ -1,17 +1,34 @@
 <h1 align="left">Hi <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, I'm Abner Ribeiro</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abneribeiro&color=yellow" alt="Profile views" /> </p>
 
-- 🔥 Data Analyst focused on learning from my personal projects 
+## About Me
+🌟 Data stories are my passion, and I'm an avid explorer in the realm of data. As a Data Analyst, I delve into the depths of datasets, unearthing hidden gems of insights and transforming them into compelling narratives. My goal is to empower decision-makers with the knowledge they need to drive meaningful change and fuel success.
 
+- 🔥 Data analyst focused on continuous learning through hands-on projects and eager to contribute expertise to drive impactful insights. 🚀💡 
+  
 - 🔭 I’m currently working on personal projects
 
-- 🌱 I’m currently learning Data Science
+- 🌱 I’m currently learning **Machine Learning**
 
 - 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS**
 
 - ⚡ Fun fact **A63 😜**
 
+## Featured Projects
+🚀 Here are some of the projects that showcase my abilities:
 
+- [European Bike Sales](https://github.com/abneribeiro/Machine-Learning-Projects/tree/master/project1_europe_bikes) 🚲 Uncover the secrets of bike usage in Europe! 🌍📊 Explore data, predict demand, and optimize infrastructure for a smarter mobility experience. Join the thrilling journey of Europe Bikes and pedal into the fascinating world of bike data! 🚀
+
+## Skills
+💡 Here are some of the skills I bring to the table:
+
+- Exploratory Data Analysis
+- Data Wrangling and Preprocessing
+- Statistical Modeling
+- Machine Learning
+- Data Visualization
+- Programming Languages: Python, SQL
+- Tools: pandas, scikit-learn
 
 
 <br><br>
@@ -31,17 +48,8 @@
 
 <br><br>
 
-## ⚙️ &nbsp;GitHub Analytics
-
-<p align="left">
-<img width="530em" src="https://github-readme-stats.vercel.app/api?username=abneribeiro&show_icons=true&theme=vision-friendly-dark" alt="abneribeiro's stats"/>
-
-</p>
-
-
-<br><br>
-
 ## Contact
+📫 Let's connect! Feel free to reach out to me through the following channels:
 
 <p align="left" style="background:yellow">
 <a href="https://twitter.com/AbhineRibeiro" target="_blank">
@@ -59,6 +67,29 @@
 
 </a>
 </p>
+
+I'm excited to engage in meaningful discussions, explore potential opportunities, and collaborate on innovative projects.
+
+
+## ⚙️ &nbsp;GitHub Analytics
+
+<p align="left">
+<img width="530em" src="https://github-readme-stats.vercel.app/api?username=abneribeiro&show_icons=true&theme=vision-friendly-dark" alt="abneribeiro's stats"/>
+
+</p>
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
 
 
 
