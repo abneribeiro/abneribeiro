@@ -1,4 +1,4 @@
-<h1 align="left">Hi <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, I'm Abner Ribeiro</h1>
+<h1 align="left">Hi<img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, I'm Abner Ribeiro</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abneribeiro&color=yellow" alt="Profile views" /> </p>
 
 ## About Me
@@ -17,7 +17,7 @@
 ## Featured Projects
 🚀 Here are some of the projects that showcase my abilities:
 
-- [European Bike Sales](https://github.com/abneribeiro/Machine-Learning-Projects/tree/master/project1_europe_bikes) Uncover the secrets of bike usage in Europe! 🌍📊 Explore data, predict demand, and optimize infrastructure for a smarter mobility experience. Join the thrilling journey of Europe Bikes and pedal into the fascinating world of bike data! 🚀
+- [European Bike Sales]:(https://github.com/abneribeiro/Machine-Learning-Projects/tree/master/project1_europe_bikes) Uncover the secrets of bike usage in Europe! 🌍📊 Explore data, predict demand, and optimize infrastructure for a smarter mobility experience. Join the thrilling journey of Europe Bikes and pedal into the fascinating world of bike data! 🚀
 
 ## Skills
 💡 Here are some of the skills I bring to the table:
