@@ -2,10 +2,8 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abneribeiro&color=yellow" alt="Profile views" /> </p>
 
 ## About Me
-🌟 I am a Software Engineer passionate about creating innovative and scalable solutions. With strong skills in programming, application development, and software architecture, I have experience in various programming languages such as Python, Java, and JavaScript. My goal is to build efficient and robust systems, utilizing best development practices and collaborating with multidisciplinary teams. I have a curious mindset and stay updated with the latest technological trends. I am ready to tackle challenges and contribute to the success of high-impact software projects.
+🌟  Dedicated Software Engineer with skills in programming, application development, and software architecture. Experienced in Python, Java, and JavaScript. Goal: build efficient systems, adhere to best practices, collaborate with diverse teams. Curious, up-to-date with tech trends. Ready for challenges and high-impact projects.
 
-
-- 💻 Frontend Development: I have extensive experience in frontend development, including HTML, CSS, and JavaScript. I create visually appealing and responsive user interfaces that provide an intuitive and engaging experience for users. I am also proficient in frameworks like React and Next.js, which enable me to build dynamic and interactive web applications.
 
 - 🛠  Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
   
