@@ -2,17 +2,16 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abneribeiro&color=yellow" alt="Profile views" /> </p>
 
 ## About Me
-🌟 Data stories are my passion, and I'm an avid explorer in the realm of data. As a Data Analyst, I delve into the depths of datasets, unearthing hidden gems of insights and transforming them into compelling narratives. My goal is to empower decision-makers with the knowledge they need to drive meaningful change and fuel success.
+🌟 I am a Software Engineer passionate about creating innovative and scalable solutions. With strong skills in programming, application development, and software architecture, I have experience in various programming languages such as Python, Java, and JavaScript. My goal is to build efficient and robust systems, utilizing best development practices and collaborating with multidisciplinary teams. I have a curious mindset and stay updated with the latest technological trends. I am ready to tackle challenges and contribute to the success of high-impact software projects.
 
-- 🔥 Data analyst focused on continuous learning through hands-on projects and eager to contribute expertise to drive impactful insights. 🚀💡
 
 - 💻 Frontend Development: I have extensive experience in frontend development, including HTML, CSS, and JavaScript. I create visually appealing and responsive user interfaces that provide an intuitive and engaging experience for users. I am also proficient in frameworks like React and Next.js, which enable me to build dynamic and interactive web applications.
 
 - 🛠 Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
   
-- 🌱 Machine Learning: I'm currently expanding my knowledge in Machine Learning. I am familiar with popular ML algorithms and frameworks like scikit-learn and TensorFlow. This allows me to explore patterns, make predictions, and uncover deeper insights from complex datasets.
+- 🌱 Machine Learning: I'm currently expanding my knowledge in Machine Learning. I am familiar with popular ML algorithms and frameworks like scikit-learn. This allows me to explore patterns, make predictions, and uncover deeper insights from complex datasets.
 
-- 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS**
+- 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS...**
 
 - ⚡ Fun fact **A63 😜**
 
@@ -29,8 +28,8 @@
 - Statistical Modeling
 - Machine Learning
 - Data Visualization
-- Programming Languages: Python, SQL
-- Tools: pandas, scikit-learn
+- Programming Languages: Python, SQL, JavaScript
+- Tools: pandas, scikit-learn, Flask, NextJS
 
 
 <br><br>
