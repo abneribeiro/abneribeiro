@@ -7,7 +7,7 @@
 
 - 💻 Frontend Development: I have extensive experience in frontend development, including HTML, CSS, and JavaScript. I create visually appealing and responsive user interfaces that provide an intuitive and engaging experience for users. I am also proficient in frameworks like React and Next.js, which enable me to build dynamic and interactive web applications.
 
-- 🛠 Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
+- 🛠  Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
   
 - 🌱 Machine Learning: I'm currently expanding my knowledge in Machine Learning. I am familiar with popular ML algorithms and frameworks like scikit-learn. This allows me to explore patterns, make predictions, and uncover deeper insights from complex datasets.
 
