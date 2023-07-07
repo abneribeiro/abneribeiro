@@ -4,11 +4,13 @@
 ## About Me
 🌟 Data stories are my passion, and I'm an avid explorer in the realm of data. As a Data Analyst, I delve into the depths of datasets, unearthing hidden gems of insights and transforming them into compelling narratives. My goal is to empower decision-makers with the knowledge they need to drive meaningful change and fuel success.
 
-- 🔥 Data analyst focused on continuous learning through hands-on projects and eager to contribute expertise to drive impactful insights. 🚀💡 
-  
-- 🔭 I’m currently working on personal projects
+- 🔥 Data analyst focused on continuous learning through hands-on projects and eager to contribute expertise to drive impactful insights. 🚀💡
 
-- 🌱 I’m currently learning **Machine Learning**
+- 💻 Frontend Development: I have extensive experience in frontend development, including HTML, CSS, and JavaScript. I create visually appealing and responsive user interfaces that provide an intuitive and engaging experience for users. I am also proficient in frameworks like React and Next.js, which enable me to build dynamic and interactive web applications.
+
+- 🛠 Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
+  
+- 🌱 Machine Learning: I'm currently expanding my knowledge in Machine Learning. I am familiar with popular ML algorithms and frameworks like scikit-learn and TensorFlow. This allows me to explore patterns, make predictions, and uncover deeper insights from complex datasets.
 
 - 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS**
 
