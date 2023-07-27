@@ -5,10 +5,6 @@
 🌟  Dedicated Software Engineer with skills in programming, application development, and software architecture. Experienced in Python, Java, and JavaScript. Goal: build efficient systems, adhere to best practices, collaborate with diverse teams. Curious, up-to-date with tech trends. Ready for challenges and high-impact projects.
 
 
-- 🛠  Full Stack Development: I have expertise in backend technologies such as Node.js and MongoDB. This enables me to build end-to-end web applications, handle data storage and retrieval, and create robust APIs for seamless data integration.
-  
-- 🌱 Machine Learning: I'm currently expanding my knowledge in Machine Learning. I am familiar with popular ML algorithms and frameworks like scikit-learn. This allows me to explore patterns, make predictions, and uncover deeper insights from complex datasets.
-
 - 💬 Ask me about **Python, Pandas, Numpy, JavaScript, CSS...**
 
 - ⚡ Fun fact **A63 😜**
