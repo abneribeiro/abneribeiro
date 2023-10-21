@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Abner Ribeiro</h1>
-<h3 align="center">Backend Developer</h3>
+<h3 align="center">Software Engineering</h3>
 
 ## About Me
 🌟  Dedicated Software Engineer with skills in programming, application development, and software architecture.
