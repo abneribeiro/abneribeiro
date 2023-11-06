@@ -6,7 +6,7 @@
 
 - 🔭 I’m currently working on **A64 Post API**
 
-- 🌱 I’m currently learning ** C language and consolidating previous knowledge**
+- 🌱 I’m currently learning **C language and consolidating previous knowledge**
 
 - 👯 I’m looking to collaborate on [A64 Post API](https://abneribeiro.github.io/A64-API/#api-endpoints-and-actions)
 
