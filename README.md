@@ -34,7 +34,7 @@
   <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=twitter" alt="twitter"/>  
 </a>
 
-<a href="https://instagram.com/abhineribeiro" target="_blank">
+<a href="https://instagram.com/abneribeiro__" target="_blank">
  <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=instagram" alt="instagram"/>
 </a>
   
