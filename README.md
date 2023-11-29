@@ -25,10 +25,6 @@
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
 ![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)&nbsp;
-
-
-
-
 <br><br>
 
 ## Contact
@@ -50,9 +46,6 @@
 
 </a>
 </p>
-
-I'm excited to engage in meaningful discussions, explore potential opportunities, and collaborate on innovative projects.
-
 
 
 
