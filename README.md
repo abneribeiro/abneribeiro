@@ -2,16 +2,14 @@
 <h3 align="center">Software Engineering</h3>
 
 ## About Me
-🌟  Dedicated Software Engineer with skills in programming, application development, and software architecture.
 
-- 🔭 I’m currently working on **A64 Post API**
+- 🔭 Currently dedicated to developing the **A64 Post API**, building efficient and robust solutions.
+  
+- 🌱 Actively learning the intricacies of **Golang and C**, enhancing my coding prowess.
 
-- 🌱 I’m currently learning **C language and consolidating previous knowledge**
+- 👯 I invite collaborators for the [GOAPI](https://github.com/abneribeiro/go-api) project. Join the coding adventure!
 
-- 👯 I’m looking to collaborate on [A64 Post API](https://abneribeiro.github.io/A64-API/#api-endpoints-and-actions)
-
-- ⚡ Fun fact **A63 😜**
-
+- ⚡ Fun fact: **A63 😜** 🚀
 
 <br><br>
 
