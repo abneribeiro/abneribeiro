@@ -3,7 +3,7 @@
 
 ## About Me
 
-- 🔭 Currently dedicated to developing the **A64 Post API**, building efficient and robust solutions.
+- 🔭 Currently dedicated to developing the **GOAPI**, building efficient and robust solutions.
   
 - 🌱 Actively learning the intricacies of **Golang and C**, enhancing my coding prowess.
 
