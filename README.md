@@ -3,13 +3,11 @@
 
 ## About Me
 
-- 🔭 Currently dedicated to developing the **GOAPI**, building efficient and robust solutions.
+- 🔭 Currently working on **personal** and **collaborative projects** building efficient and robust solutions.
   
-- 🌱 Actively learning the intricacies of **Golang and C**, enhancing my coding prowess.
+- 🌱 Actively learning the intricacies of **Typescript and C**, enhancing my coding prowess.
 
 - 👯 I invite collaborators for the [GOAPI](https://github.com/abneribeiro/go-api) project. Join the coding adventure!
-
-- ⚡ Fun fact: **A63 😜** 🚀
 
 <br><br>
 
