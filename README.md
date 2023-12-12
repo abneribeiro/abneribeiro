@@ -7,7 +7,7 @@
   
 - 🌱 Actively learning the intricacies of **Typescript and C**, enhancing my coding prowess.
 
-- 👯 I invite collaborators for the [GOAPI](https://github.com/abneribeiro/go-api) project. Join the coding adventure!
+- 👯 I invite collaborators for the [API Node](https://github.com/abneribeiro/A64-API) project. Join the coding adventure!
 
 <br><br>
 
