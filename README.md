@@ -30,7 +30,7 @@ I strive to learn as much as possible through my projects and contribute to open
   
 - 🌱 Actively learning the intricacies of **Typescript and C**, enhancing my coding prowess.
 
-- 👯 I invite collaborators for the [API Node](https://github.com/abneribeiro/A64-API) project. Join the coding adventure!
+- 👯 I invite collaborators for the [EquipReserve ](https://github.com/abneribeiro/EquipReserve) project. Join the coding adventure!
 ---
 
 <details>
