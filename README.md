@@ -1,6 +1,7 @@
 # 👨🏽‍💻 Abner Ribeiro
 
-**` Developer (Frontend/Backend)`**
+**` Developer Backend`**
+
 ---
 [![Twitter Badge](https://img.shields.io/badge/-@abneribeiro_-00875f?style=flat-square&labelColor=00875f&logo=twitter&logoColor=white&link=https://twitter.com/abneribeiro_)](https://twitter.com/abneribeiro_) 
 [![Linkedin Badge](https://img.shields.io/badge/-Abner%20Ribeiro-00875f?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/abneribeiro/)](https://www.linkedin.com/in/abneribeiro/v]) 
