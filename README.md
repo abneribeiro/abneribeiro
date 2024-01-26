@@ -1,6 +1,11 @@
 # 👨🏽‍💻 Abner Ribeiro
 
 **` Developer (Frontend/Backend)`**
+---
+[![Twitter Badge](https://img.shields.io/badge/-@abneribeiro_-00875f?style=flat-square&labelColor=00875f&logo=twitter&logoColor=white&link=https://twitter.com/abneribeiro_)](https://twitter.com/abneribeiro_) 
+[![Linkedin Badge](https://img.shields.io/badge/-Abner%20Ribeiro-00875f?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/abneribeiro/)](https://www.linkedin.com/in/abneribeiro/v]) 
+[![Gmail Badge](https://img.shields.io/badge/-eliasabner38@gmail.com-00875f?style=flat-square&logo=Gmail&logoColor=white&link=mailto:eliasabner38@gmail.com)](mailto:eliasabner38@gmail.com)
+
 
 All coding projects are built from the ground up, from planning and designing all the way to solving real-life problems with code. 
 I strive to learn as much as possible through my projects and contribute to open-source initiatives, all while exploring my full potential.
@@ -43,7 +48,7 @@ I strive to learn as much as possible through my projects and contribute to open
 📫 Let's connect! Feel free to reach out to me through the following channels:
 
 <p align="left" style="background:yellow">
-<a href="https://twitter.com/abneribeiro_" target="_blank">
+<a href="https://twitter.com/" target="_blank">
   <img align="center" src="https://img.shields.io/badge/-abneribeiro-05122A?style=flat&logo=twitter" alt="twitter"/>  
 </a>
 
