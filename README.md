@@ -13,8 +13,6 @@ I strive to learn as much as possible through my projects and contribute to open
 
 ---
 
-
----
 #### Current Focus
 
 - 🔭 Currently working on **personal** and **collaborative projects** building efficient and robust solutions.
