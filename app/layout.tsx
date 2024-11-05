@@ -47,15 +47,13 @@ export const metadata: Metadata = {
   },
 }
 
-const cx = (...classes) => classes.filter(Boolean).join(' ')
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={cx(inter.className)}>
+    <html lang="en" className={inter.className}>
       <head>
         <meta name="google-adsense-account" content="ca-pub-8632014601674595" />
       </head>
@@ -66,9 +64,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col flex-grow max-w-xl mx-auto px-4 lg:px-0">
+          <div className="flex flex-col min-h-screen prevent-shift">
             <Navbar />
-            <main className="flex-grow min-w-0 mt-20  flex flex-col">
+            <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl w-full">
               {children}
             </main>
             <Footer />

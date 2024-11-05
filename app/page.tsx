@@ -4,15 +4,15 @@ import { BlogPosts } from '@/app/components/posts'
 
 export default function Page() {
   return (
-    <section className="mx-auto pt-8 sm:pt-10 text-wrap">
+    <section className="py-8 sm:py-10">
       <h1 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-        <span className="inline-block bg-gradient-to-r from-primary to-muted bg-clip-text ">
+        <span className="inline-block bg-gradient-to-r from-primary to-muted bg-clip-text text-transparent">
           Abner Ribeiro
         </span>
         <span className="block text-foreground">Software Developer</span>
       </h1>
 
-      <p className="mb-8 max-w-2xl text-base text-foreground sm:text-base tracking-tight">
+      <p className="mb-8 max-w-2xl text-base text-foreground sm:text-lg tracking-tight">
         You can see more of my work on{' '}
         <Link
           href="https://x.com/abneribeiroo"
@@ -33,7 +33,7 @@ export default function Page() {
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
           href="https://github.com/abneribeiroo"
-          className="inline-flex items-center gap-1 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:text-primary-foreground/80"
+          className="inline-flex items-center gap-1 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
         >
           <RiGithubLine className="h-4 w-4" />
           View GitHub Profile

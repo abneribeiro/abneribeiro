@@ -5,28 +5,16 @@ import { baseUrl } from '@/app/sitemap'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  return posts.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata(props) {
   const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug)
-  if (!post) {
-    return
-  }
+  if (!post) return
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  let { title, publishedAt: publishedTime, summary: description, image } = post.metadata
+  let ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -37,11 +25,7 @@ export async function generateMetadata(props) {
       type: 'article',
       publishedTime,
       url: `${baseUrl}/notes/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -61,7 +45,7 @@ export default async function Notes(props) {
   }
 
   return (
-    <section>
+    <article className="py-8 sm:py-10">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -75,7 +59,7 @@ export default async function Notes(props) {
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+              : `${baseUrl}/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/notes/${post.slug}`,
             author: {
               '@type': 'Person',
@@ -84,17 +68,17 @@ export default async function Notes(props) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 text-sm">
+        <p className="text-muted-foreground mb-2 sm:mb-0">
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
-      <article className="prose ">
+      <div className="prose dark:prose-invert max-w-none">
         <CustomMDX source={post.content} />
-      </article>
-    </section>
+      </div>
+    </article>
   )
 }

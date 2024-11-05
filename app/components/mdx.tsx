@@ -6,23 +6,25 @@ import React from 'react'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
+    <th key={index} className="px-4 py-2">{header}</th>
   ))
   let rows = data.rows.map((row, index) => (
-    <tr key={index}>
+    <tr key={index} className={index % 2 === 0 ? 'bg-background' : 'bg-muted'}>
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
+        <td key={cellIndex} className="px-4 py-2">{cell}</td>
       ))}
     </tr>
   ))
 
   return (
-    <table>
-      <thead>
-        <tr>{headers}</tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-y divide-border">
+        <thead className="bg-muted">
+          <tr>{headers}</tr>
+        </thead>
+        <tbody className="divide-y divide-border">{rows}</tbody>
+      </table>
+    </div>
   )
 }
 
@@ -31,37 +33,47 @@ function CustomLink(props) {
 
   if (href.startsWith('/')) {
     return (
-      <Link href={href} {...props}>
+      <Link href={href} {...props} className="text-primary hover:underline">
         {props.children}
       </Link>
     )
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />
+    return <a {...props} className="text-primary hover:underline" />
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return <a target="_blank" rel="noopener noreferrer" {...props} className="text-primary hover:underline" />
 }
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  return (
+    <div className="my-6">
+      <Image alt={props.alt} className="rounded-lg" {...props} />
+    </div>
+  )
 }
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  return (
+    <code
+      dangerouslySetInnerHTML={{ __html: codeHTML }}
+      {...props}
+      className="px-1 py-0.5 rounded-md bg-muted text-foreground"
+    />
+  )
 }
 
 function slugify(str) {
   return str
     .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, '-and-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
 }
 
 function createHeading(level) {
@@ -69,12 +81,14 @@ function createHeading(level) {
     let slug = slugify(children)
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className: `scroll-m-20 ${level === 1 ? 'text-4xl' : level === 2 ? 'text-3xl' : level === 3 ? 'text-2xl' : level === 4 ? 'text-xl' : 'text-lg'} font-bold tracking-tight` },
       [
         React.createElement('a', {
           href: `#${slug}`,
           key: `link-${slug}`,
-          className: 'anchor',
+          className: 'anchor invisible absolute -ml-8 pr-2 text-muted-foreground hover:visible',
+          'aria-hidden': 'true',
+          children: '#',
         }),
       ],
       children
