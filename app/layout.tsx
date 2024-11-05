@@ -54,9 +54,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <head>
-        <meta name="google-adsense-account" content="ca-pub-8632014601674595" />
-      </head>
       <body className="antialiased min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
         <ThemeProvider
           attribute="class"
