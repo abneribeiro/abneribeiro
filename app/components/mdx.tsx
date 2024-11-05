@@ -82,15 +82,12 @@ function createHeading(level) {
     return React.createElement(
       `h${level}`,
       { id: slug, className: `scroll-m-20 ${level === 1 ? 'text-4xl' : level === 2 ? 'text-3xl' : level === 3 ? 'text-2xl' : level === 4 ? 'text-xl' : 'text-lg'} font-bold tracking-tight` },
-      [
-        React.createElement('a', {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: 'anchor invisible absolute -ml-8 pr-2 text-muted-foreground hover:visible',
-          'aria-hidden': 'true',
-          children: '#',
-        }),
-      ],
+      React.createElement('a', {
+        href: `#${slug}`,
+        key: `link-${slug}`,
+        className: 'anchor invisible absolute -ml-8 pr-2 text-muted-foreground hover:visible',
+        'aria-hidden': 'true',
+      }, '#'),
       children
     )
   }
