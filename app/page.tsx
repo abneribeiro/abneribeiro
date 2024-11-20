@@ -4,7 +4,7 @@ import { RiGithubLine, RiTwitterXLine } from "react-icons/ri"
 
 export default function Component() {
   return (
-    <div className="flex items-center min-h-[calc(100vh-8rem)]">
+    <div className="flex items-center min-h-[calc(100vh-6.6rem)] pl-4 grid-background border-x  border-border-color">
       <section className="w-full max-w-2xl py-8 sm:py-10 ">
         <h1 className="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
           <span className="inline-block bg-clip-text">

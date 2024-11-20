@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .grid-background {
+    background-size: 14px 14px;
+    background-image:
+      linear-gradient(to right, #f6f6f6 2px, transparent 2px),
+      linear-gradient(to bottom, #f6f6f6 2px, transparent 2px);
+  }
+}
+
+
 
 :root {
   --background: 0, 0%, 98%;
-  --foreground: 0, 0%, 7%;
+  --foreground: 0, 0%, 8.63%;
   --muted: 0, 0%, 96%;
   --muted-foreground: 0, 0%, 45%;
   --popover: 0, 0%, 100%;
   --popover-foreground: 0, 0%, 7%;
   --card: 0, 0%, 100%;
   --card-foreground: 0, 0%, 7%;
-  --border: 0, 0%, 89%;
+  --border:  0, 0%, 87.06%;
   --input: 0, 0%, 89%;
   --primary: 0, 0%, 9%;
   --primary-foreground: 0, 0%, 98%;
@@ -37,38 +47,6 @@
   --sh-entity: hsl(18, 85%, 43%);
 }
 
-.dark {
-  --background: 0, 0%, 9%;  /* #161616 */
-  --foreground: 0, 0%, 89%;
-  --muted: 0, 0%, 12%;
-  --muted-foreground: 0, 0%, 65%;
-  --popover: 0, 0%, 7%;
-  --popover-foreground: 0, 0%, 89%;
-  --card: 0, 0%, 7%;
-  --card-foreground: 0, 0%, 89%;
-  --border: 0, 0%, 15%;
-  --input: 0, 0%, 20%;
-  --primary: 0, 0%, 89%;
-  --primary-foreground: 0, 0%, 9%;
-  --secondary: 0, 0%, 15%;
-  --secondary-foreground: 0, 0%, 89%;
-  --accent: 0, 0%, 12%;
-  --accent-foreground: 0, 0%, 89%;
-  --destructive: 0, 62%, 30%;
-  --destructive-foreground: 0, 0%, 98%;
-  --ring: 0, 0%, 22%;
-
-  /* Syntax Highlighting */
-  --sh-class: hsl(206, 57%, 61%);
-  --sh-identifier: hsl(131, 52%, 50%);
-  --sh-sign: hsl(214, 29%, 67%);
-  --sh-string: hsl(205, 100%, 84%);
-  --sh-keyword: hsl(4, 100%, 64%);
-  --sh-comment: hsl(213, 7%, 58%);
-  --sh-jsxliterals: hsl(205, 100%, 75%);
-  --sh-property: hsl(32, 100%, 65%);
-  --sh-entity: hsl(132, 65%, 56%);
-}
 
 @layer base {
   * {

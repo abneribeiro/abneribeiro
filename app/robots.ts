@@ -1,4 +1,3 @@
-import { baseUrl } from '@/app/sitemap'
 
 export default function robots() {
   return {
@@ -7,6 +6,6 @@ export default function robots() {
         userAgent: '*',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${"https://abneribeiro.vercel.app"}/sitemap.xml`,
   }
 }
