@@ -1,0 +1,401 @@
+---
+title: "Advanced TypeScript Patterns for Scalable Applications"
+date: "2024-02-10"
+description: "Explore advanced TypeScript patterns and techniques that help build more maintainable and type-safe applications at scale."
+tags: ["typescript", "advanced", "patterns", "types", "programming"]
+---
+
+# Advanced TypeScript Patterns for Scalable Applications
+
+TypeScript has revolutionized the way we write JavaScript by bringing static type checking to the dynamic world of web development. While basic TypeScript usage is straightforward, mastering advanced patterns can significantly improve code quality, maintainability, and developer experience in large-scale applications.
+
+## Why Advanced TypeScript Patterns Matter
+
+As applications grow in complexity, the benefits of advanced TypeScript patterns become more apparent:
+
+- **Better IDE support** with intelligent autocomplete and refactoring
+- **Compile-time error detection** preventing runtime bugs
+- **Self-documenting code** through expressive type definitions
+- **Safer refactoring** with confidence in breaking changes detection
+- **Improved team collaboration** with clear contracts and interfaces
+
+## Advanced Type Utilities
+
+### Conditional Types
+
+Conditional types allow you to create types that depend on a condition, similar to ternary operators for types:
+
+```typescript
+type ApiResponse<T> = T extends string 
+  ? { message: T } 
+  : T extends number 
+    ? { count: T } 
+    : { data: T };
+
+type StringResponse = ApiResponse<string>; // { message: string }
+type NumberResponse = ApiResponse<number>; // { count: number }
+type ObjectResponse = ApiResponse<User>; // { data: User }
+```
+
+### Mapped Types with Template Literals
+
+Create powerful type transformations using template literal types:
+
+```typescript
+type EventMap = {
+  click: MouseEvent;
+  scroll: Event;
+  keydown: KeyboardEvent;
+};
+
+type EventHandlers = {
+  [K in keyof EventMap as `on${Capitalize<K>}`]: (event: EventMap[K]) => void;
+};
+
+// Result:
+// {
+//   onClick: (event: MouseEvent) => void;
+//   onScroll: (event: Event) => void;
+//   onKeydown: (event: KeyboardEvent) => void;
+// }
+```
+
+### Recursive Types for Deep Operations
+
+Handle nested structures with recursive type definitions:
+
+```typescript
+type DeepReadonly<T> = {
+  readonly [P in keyof T]: T[P] extends object 
+    ? DeepReadonly<T[P]> 
+    : T[P];
+};
+
+type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object 
+    ? DeepPartial<T[P]> 
+    : T[P];
+};
+
+interface User {
+  name: string;
+  address: {
+    street: string;
+    city: string;
+    country: {
+      name: string;
+      code: string;
+    };
+  };
+}
+
+type ReadonlyUser = DeepReadonly<User>;
+type PartialUser = DeepPartial<User>;
+```
+
+## Brand Types for Type Safety
+
+Brand types help create distinct types from primitive values, preventing accidental mixing:
+
+```typescript
+type Brand<T, B> = T & { __brand: B };
+
+type UserId = Brand<string, 'UserId'>;
+type ProductId = Brand<string, 'ProductId'>;
+type Email = Brand<string, 'Email'>;
+
+const createUserId = (id: string): UserId => id as UserId;
+const createProductId = (id: string): ProductId => id as ProductId;
+
+function getUser(userId: UserId) {
+  // Implementation
+}
+
+function getProduct(productId: ProductId) {
+  // Implementation
+}
+
+const userId = createUserId('user_123');
+const productId = createProductId('prod_456');
+
+getUser(userId); // ✅ Correct
+getUser(productId); // ❌ Type error - prevents mixing IDs
+```
+
+## Advanced Function Overloading
+
+Create flexible APIs with sophisticated function signatures:
+
+```typescript
+interface QueryBuilder {
+  select(): QueryBuilder;
+  select(columns: string[]): QueryBuilder;
+  select<T>(selector: (obj: any) => T): QueryBuilder;
+}
+
+function createQuery(): QueryBuilder;
+function createQuery(table: string): QueryBuilder;
+function createQuery<T>(table: string, schema: T): QueryBuilder & T;
+function createQuery(table?: string, schema?: any): any {
+  // Implementation
+}
+
+// Usage
+const query1 = createQuery(); // QueryBuilder
+const query2 = createQuery('users'); // QueryBuilder
+const query3 = createQuery('users', { 
+  findByEmail: (email: string) => {} 
+}); // QueryBuilder & { findByEmail: (email: string) => {} }
+```
+
+## Discriminated Unions for State Management
+
+Model complex state with discriminated unions:
+
+```typescript
+type LoadingState = {
+  status: 'loading';
+  progress?: number;
+};
+
+type SuccessState = {
+  status: 'success';
+  data: any[];
+  lastUpdated: Date;
+};
+
+type ErrorState = {
+  status: 'error';
+  error: string;
+  retryCount: number;
+};
+
+type AsyncState = LoadingState | SuccessState | ErrorState;
+
+function handleState(state: AsyncState) {
+  switch (state.status) {
+    case 'loading':
+      // TypeScript knows this is LoadingState
+      console.log(`Loading... ${state.progress}%`);
+      break;
+    case 'success':
+      // TypeScript knows this is SuccessState
+      console.log(`Data loaded: ${state.data.length} items`);
+      break;
+    case 'error':
+      // TypeScript knows this is ErrorState
+      console.log(`Error: ${state.error} (retry: ${state.retryCount})`);
+      break;
+  }
+}
+```
+
+## Advanced Generic Constraints
+
+Use generic constraints to create more precise and safe APIs:
+
+```typescript
+interface Identifiable {
+  id: string;
+}
+
+interface Timestamped {
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+// Constrain generics to specific shapes
+function updateEntity<T extends Identifiable & Timestamped>(
+  entity: T,
+  updates: Partial<Omit<T, 'id' | 'createdAt'>>
+): T {
+  return {
+    ...entity,
+    ...updates,
+    updatedAt: new Date(),
+  };
+}
+
+// Extract keys that are functions
+type FunctionKeys<T> = {
+  [K in keyof T]: T[K] extends Function ? K : never;
+}[keyof T];
+
+type NonFunctionKeys<T> = {
+  [K in keyof T]: T[K] extends Function ? never : K;
+}[keyof T];
+
+type DataOnly<T> = Pick<T, NonFunctionKeys<T>>;
+type MethodsOnly<T> = Pick<T, FunctionKeys<T>>;
+```
+
+## Builder Pattern with Fluent Interface
+
+Create type-safe builders that guide correct usage:
+
+```typescript
+interface ApiCall {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE';
+  url: string;
+  headers?: Record<string, string>;
+  body?: any;
+}
+
+class ApiCallBuilder {
+  private config: Partial<ApiCall> = {};
+
+  method(method: ApiCall['method']) {
+    this.config.method = method;
+    return this;
+  }
+
+  url(url: string) {
+    this.config.url = url;
+    return this;
+  }
+
+  headers(headers: Record<string, string>) {
+    this.config.headers = headers;
+    return this;
+  }
+
+  body(body: any) {
+    this.config.body = body;
+    return this;
+  }
+
+  build(): ApiCall {
+    if (!this.config.method || !this.config.url) {
+      throw new Error('Method and URL are required');
+    }
+    return this.config as ApiCall;
+  }
+}
+
+// Usage
+const apiCall = new ApiCallBuilder()
+  .method('POST')
+  .url('/api/users')
+  .headers({ 'Content-Type': 'application/json' })
+  .body({ name: 'John' })
+  .build();
+```
+
+## Type-Safe Event System
+
+Build event systems that prevent runtime errors:
+
+```typescript
+type EventMap = {
+  'user:login': { userId: string; timestamp: Date };
+  'user:logout': { userId: string };
+  'order:created': { orderId: string; amount: number };
+  'order:shipped': { orderId: string; trackingNumber: string };
+};
+
+class TypedEventEmitter {
+  private listeners: { [K in keyof EventMap]?: Array<(data: EventMap[K]) => void> } = {};
+
+  on<K extends keyof EventMap>(event: K, listener: (data: EventMap[K]) => void) {
+    if (!this.listeners[event]) {
+      this.listeners[event] = [];
+    }
+    this.listeners[event]!.push(listener);
+  }
+
+  emit<K extends keyof EventMap>(event: K, data: EventMap[K]) {
+    const eventListeners = this.listeners[event];
+    if (eventListeners) {
+      eventListeners.forEach(listener => listener(data));
+    }
+  }
+
+  off<K extends keyof EventMap>(event: K, listener: (data: EventMap[K]) => void) {
+    const eventListeners = this.listeners[event];
+    if (eventListeners) {
+      const index = eventListeners.indexOf(listener);
+      if (index > -1) {
+        eventListeners.splice(index, 1);
+      }
+    }
+  }
+}
+
+// Usage
+const emitter = new TypedEventEmitter();
+
+emitter.on('user:login', (data) => {
+  // data is automatically typed as { userId: string; timestamp: Date }
+  console.log(`User ${data.userId} logged in at ${data.timestamp}`);
+});
+
+emitter.emit('user:login', {
+  userId: 'user123',
+  timestamp: new Date()
+});
+```
+
+## Runtime Type Validation
+
+Combine TypeScript with runtime validation for end-to-end type safety:
+
+```typescript
+// Define schema with runtime validation
+const UserSchema = {
+  id: (value: any): value is string => typeof value === 'string',
+  name: (value: any): value is string => typeof value === 'string',
+  email: (value: any): value is string => 
+    typeof value === 'string' && value.includes('@'),
+  age: (value: any): value is number => 
+    typeof value === 'number' && value > 0,
+} as const;
+
+type User = {
+  [K in keyof typeof UserSchema]: typeof UserSchema[K] extends (value: any) => value is infer T ? T : never;
+};
+
+function validateUser(data: any): data is User {
+  return Object.entries(UserSchema).every(([key, validator]) => 
+    validator(data[key])
+  );
+}
+
+function processUser(data: unknown) {
+  if (validateUser(data)) {
+    // data is now typed as User
+    console.log(`Processing user: ${data.name} (${data.email})`);
+  } else {
+    throw new Error('Invalid user data');
+  }
+}
+```
+
+## Performance Considerations
+
+When using advanced TypeScript patterns, consider:
+
+### Compilation Performance
+- **Avoid deeply recursive types** that can slow compilation
+- **Use type assertions judiciously** to help the compiler
+- **Prefer interfaces over types** for object shapes when possible
+
+### Bundle Size Impact
+- Advanced types are **compile-time only** and don't affect runtime bundle size
+- Runtime type guards and validation **do add to bundle size**
+- Consider using libraries like **Zod** or **io-ts** for production runtime validation
+
+## Best Practices for Team Adoption
+
+1. **Start gradually** - Introduce patterns incrementally
+2. **Document patterns** - Create team guidelines and examples
+3. **Use eslint-plugin-typescript** - Enforce consistent usage
+4. **Regular code reviews** - Share knowledge and catch issues early
+5. **Type-first development** - Design types before implementation
+
+## Conclusion
+
+Advanced TypeScript patterns provide powerful tools for building scalable, maintainable applications. While the learning curve can be steep, the benefits in terms of code quality, developer experience, and runtime safety make the investment worthwhile.
+
+The key is to apply these patterns judiciously - not every situation requires the most advanced TypeScript features. Start with simpler patterns and gradually introduce more complex ones as your team's expertise grows.
+
+Remember that TypeScript's strength lies not just in catching errors, but in enabling confident refactoring and providing excellent tooling support that makes development more productive and enjoyable.
