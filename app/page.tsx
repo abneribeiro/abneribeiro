@@ -11,12 +11,8 @@ export default function HomePage() {
         <ul className="text-copy pl-0 space-y-1">
           <li className="pl-1">being a software developer & problem solver</li>
           <li className="pl-1">building applications that help people daily</li>
-          <li className="pl-1">working with modern technologies like React & Next.js</li>
           <li className="pl-1">contributing to open source projects</li>
           <li className="pl-1">writing clean, maintainable code</li>
-          <li className="pl-1">mentoring other developers</li>
-          <li className="pl-1">continuously learning new technologies</li>
-          <li className="pl-1">creating user-centered experiences</li>
         </ul>
         
         <h2 className="text-2xl md:text-3xl mb-4 mt-12 font-medium">things i believe</h2>
@@ -35,20 +31,7 @@ export default function HomePage() {
               <li className="pl-1">sharing knowledge helps everyone grow</li>
             </ul>
           </li>
-          <li className="pl-1">good communication is crucial
-            <ul className="text-copy pl-0 space-y-1">
-              <li className="pl-1">clear documentation saves time</li>
-              <li className="pl-1">code should tell a story</li>
-              <li className="pl-1">collaboration makes teams stronger</li>
-            </ul>
-          </li>
-          <li className="pl-1">building for the future
-            <ul className="text-copy pl-0 space-y-1">
-              <li className="pl-1">scalable architecture matters</li>
-              <li className="pl-1">accessibility should be built-in</li>
-              <li className="pl-1">security is not optional</li>
-            </ul>
-          </li>
+
         </ul>
       </main>
       
@@ -56,8 +39,8 @@ export default function HomePage() {
         <ul className="space-y-2 md:text-right">
           <li className="p-0"><Link className="text-copy" href="/">about</Link></li>
           <li className="p-0"><Link className="text-nav hover:text-nav-hover" href="/blog">writing</Link></li>
-          <li className="p-0"><a href="https://github.com/abneribeiroo" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">code<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
-          <li className="p-0"><a href="https://x.com/abneribeiroo" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">follow<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
+          <li className="p-0"><a href="https://github.com/abneribeiro" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">code<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
+          <li className="p-0"><a href="https://x.com/abneribeiro" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">follow<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
         </ul>
       </nav>
     </div>
