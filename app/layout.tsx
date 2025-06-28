@@ -1,15 +1,28 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Navbar } from './components/nav'
+import { IBM_Plex_Sans_Condensed, Lora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
+import { ThemeProvider } from 'next-themes'
+import StructuredData from './components/structured-data'
 
 
-const inter = Inter({
+const ibmPlexSansCondensed = IBM_Plex_Sans_Condensed({
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500'],
+  variable: '--font-ibm-plex-sans-condensed',
+  preload: true,
+  fallback: ['Arial', 'sans-serif'],
+})
+
+const lora = Lora({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['500'],
+  variable: '--font-lora',
+  preload: true,
+  fallback: ['Georgia', 'serif'],
 })
 
 export const metadata: Metadata = {
@@ -18,7 +31,7 @@ export const metadata: Metadata = {
     default: 'Abner Ribeiro',
     template: '%s | Abner Ribeiro',
   },
-  description: 'Here you can find more about me and my work as a software engineer.',
+  description: 'I build modern web applications with clean code and great user experiences.',
   keywords: [
     'programming', 'software development', 'web development', 'notes',
     'blog', 'software engineering', 'javascript', 'typescript',
@@ -27,11 +40,18 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Abner Ribeiro',
-    description: 'Here you can find more about me and my work as a software engineer.',
+    description: 'I build modern web applications with clean code and great user experiences.',
     url: "https://abneribeiro.vercel.app",
     siteName: 'abneribeiro',
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abner Ribeiro',
+    description: 'I build modern web applications with clean code and great user experiences.',
+    creator: '@abneribeiroo',
+    site: '@abneribeiroo',
   },
   robots: {
     index: true,
@@ -52,42 +72,55 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" className={`${ibmPlexSansCondensed.variable} ${lora.variable}`} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta name="color-scheme" content="light dark" />
+        <StructuredData />
+      </head>
+      <body className="antialiased">
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                function setTheme(theme) {
+                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  const shouldBeDark = theme === 'dark' || (theme === 'system' && prefersDark) || (!theme && prefersDark);
                   
-                  if (theme === 'dark' || theme === 'light') {
-                    document.documentElement.setAttribute('data-theme', theme);
-                  } else if (systemPrefersDark) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
+                  if (shouldBeDark) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
                   } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
                   }
-                } catch (e) {
-                  document.documentElement.setAttribute('data-theme', 'light');
                 }
+                
+                // Listen for system theme changes
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaQuery.addEventListener('change', function(e) {
+                  const stored = localStorage.getItem('theme');
+                  if (!stored || stored === 'system') {
+                    setTheme('system');
+                  }
+                });
+                
+                const stored = localStorage.getItem('theme') || 'system';
+                setTheme(stored);
               })();
             `,
           }}
         />
-      </head>
-      <body className="antialiased min-h-screen bg-background text-foreground transition-colors duration-300">
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="max-w-4xl mx-auto px-6 py-12">
             {children}
-          </main>
-          <Footer />
-        </div>
+          </div>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

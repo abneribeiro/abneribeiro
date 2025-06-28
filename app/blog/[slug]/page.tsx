@@ -1,7 +1,6 @@
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getBlogPost, getBlogPostSlugs } from '@/lib/blog'
-import { formatDate } from '@/lib/utils'
-import ViewCounter from '@/app/components/view-counter'
 import MarkdownRenderer from '@/app/components/markdown-renderer'
 import { Metadata } from 'next'
 
@@ -9,6 +8,11 @@ export async function generateStaticParams() {
   const slugs = getBlogPostSlugs()
   return slugs.map((slug) => ({ slug }))
 }
+
+// Enable ISR with revalidation
+export const revalidate = 3600 // Revalidate every hour
+export const dynamic = 'force-static'
+export const dynamicParams = true
 
 export async function generateMetadata({
   params,
@@ -45,42 +49,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound()
   }
 
+  const publishedYear = new Date(post.date).getFullYear()
+  const authorName = 'abner ribeiro'
+  
   return (
-    <article className="mx-auto max-w-3xl px-3 sm:px-4 py-6 sm:py-8">
-      <header className="mb-6 sm:mb-8">
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-sm text-muted-foreground mb-4">
-          <time dateTime={post.date}>
-            {formatDate(post.date)}
-          </time>
-          <span className="hidden sm:inline">•</span>
-          <span>{post.readingTime} min read</span>
-          <span className="hidden sm:inline">•</span>
-          <ViewCounter slug={slug} />
+    <div className="flex flex-col md:flex-row justify-between relative">
+      <main className="w-full md:w-3/4 pr-0 md:pr-12">
+        <h1 className="text-4xl md:text-5xl mb-2 font-medium">{post.title.toLowerCase()}</h1>
+        <p className="text-lg text-copy mb-16">{publishedYear} – {authorName}</p>
+        
+        <div className="prose">
+          <MarkdownRenderer content={post.content} />
         </div>
-        
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 gradient-text">
-          {post.title}
-        </h1>
-        
-        <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          {post.description}
-        </p>
-        
-        {post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-4 sm:mt-6">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-muted rounded-full text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
-
-      <MarkdownRenderer content={post.content} />
-    </article>
+      </main>
+      
+      <nav className="mt-12 md:mt-0 w-full md:w-1/4">
+        <ul className="space-y-2 md:text-right">
+          <li className="p-0"><Link className="text-nav hover:text-nav-hover" href="/">about</Link></li>
+          <li className="p-0"><Link className="text-nav hover:text-nav-hover" href="/blog">writing</Link></li>
+          <li className="p-0"><a href="https://github.com/abneribeiroo" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">code<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
+          <li className="p-0"><a href="https://x.com/abneribeiroo" target="_blank" rel="noopener noreferrer" className="text-nav hover:text-nav-hover inline-flex items-center gap-1">follow<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></li>
+        </ul>
+      </nav>
+    </div>
   )
 }
