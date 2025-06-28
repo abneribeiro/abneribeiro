@@ -80,6 +80,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta name="google-site-verification" content="53a78WokeZsRCK4oY7sGGc4x5Cu_eUy55Wb5lkszRX8" />
         <meta name="color-scheme" content="light dark" />
         <StructuredData />
       </head>
