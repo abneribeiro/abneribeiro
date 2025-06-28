@@ -8,7 +8,7 @@ export default function StructuredData() {
     "url": "https://abneribeiro.vercel.app",
     "sameAs": [
       "https://github.com/abneribeiro",
-      "https://x.com/abneribeiro"
+      "https://x.com/abneribeiro0"
     ],
     "knowsAbout": [
       "React",
