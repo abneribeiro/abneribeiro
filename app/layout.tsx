@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Abner Ribeiro',
     description: 'I build modern web applications with clean code and great user experiences.',
-    creator: '@abneribeiroo',
-    site: '@abneribeiroo',
+    creator: '@abneribeiro',
+    site: '@abneribeiro',
   },
   robots: {
     index: true,
