@@ -1,7 +1,3 @@
-# abner ribeiro
-
-backend engineer. go, mostly.
-
 ## **timeline highlights**
 
 *now:*
