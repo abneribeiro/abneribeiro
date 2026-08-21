@@ -19,4 +19,4 @@
 
 ## misc
 
--   i write at [abneribeiro.com/](https://www.abneribeiro.com/)
+-   i write at [abneribeiro.com](https://www.abneribeiro.com)
