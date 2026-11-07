@@ -14,7 +14,7 @@
 
 -   [mini-jira](https://github.com/abneribeiro/mini-jira): a project and task tracker api in go, with authorization inside the sql, rotating refresh tokens with reuse detection, prometheus metrics and tests against real postgres
 -   [go-user](https://github.com/abneribeiro/go-user): a rest api on the go standard library, with optimistic concurrency through `ETag` / `If-Match` and migrations behind a postgres advisory lock
--   [dotboot](https://github.com/abneribeiro/dotboot): a cli that downloads videos and music as files every phone plays, on top of yt-dlp and ffmpeg, resumable after an interruption
+-   [dotdl](https://github.com/abneribeiro/dotdl): a cli that downloads videos and music as files every phone plays, on top of yt-dlp and ffmpeg, resumable after an interruption
 
 ## **what i actually care about**
 
