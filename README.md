@@ -1,10 +1,9 @@
 ## **timeline highlights**
 
 -   oss contributor to [melkeydev/fu-go](https://github.com/Melkeydev/fu-go), a go cli
--   shipped a three-step validation flow and critical-path guards for destructive file operations — the kind of code where a bug costs someone their files
 -   built the automatic backup and logging subsystems behind it, with unit and integration tests
 -   full stack for front-end engineers v3 — frontend masters
--   introduction to go
+-   introduction to go  — frontend masters
 
 *2023–2026:*
 -   b.sc. informatics engineering
